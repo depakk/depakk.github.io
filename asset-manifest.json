@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d1b05096.chunk.css",
+    "main.js": "/static/js/main.efc889f1.chunk.js",
+    "main.js.map": "/static/js/main.efc889f1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.791e2579.js",
+    "runtime-main.js.map": "/static/js/runtime-main.791e2579.js.map",
+    "static/js/2.0fb1c257.chunk.js": "/static/js/2.0fb1c257.chunk.js",
+    "static/js/2.0fb1c257.chunk.js.map": "/static/js/2.0fb1c257.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4d2af9c97d83f97d0c452d44fecdf6a5.js": "/precache-manifest.4d2af9c97d83f97d0c452d44fecdf6a5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.0fb1c257.chunk.js.LICENSE.txt": "/static/js/2.0fb1c257.chunk.js.LICENSE.txt",
+    "static/media/CMU Icon.png": "/static/media/CMU Icon.c0f77dd7.png",
+    "static/media/HP Icon.svg": "/static/media/HP Icon.b19dc2e1.svg",
+    "static/media/Ohio State Icon.png": "/static/media/Ohio State Icon.3e77af0a.png",
+    "static/media/dpizzle.jpg": "/static/media/dpizzle.dd3c9dbd.jpg",
+    "static/media/dprofessional.jpg": "/static/media/dprofessional.3843cd98.jpg",
+    "static/media/timelinebackground.jpg": "/static/media/timelinebackground.41e09097.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.791e2579.js",
+    "static/js/2.0fb1c257.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.efc889f1.chunk.js"
+  ]
+}

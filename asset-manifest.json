@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.d1b05096.chunk.css",
-    "main.js": "/static/js/main.efc889f1.chunk.js",
-    "main.js.map": "/static/js/main.efc889f1.chunk.js.map",
+    "main.js": "/static/js/main.940a09d9.chunk.js",
+    "main.js.map": "/static/js/main.940a09d9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.791e2579.js",
     "runtime-main.js.map": "/static/js/runtime-main.791e2579.js.map",
-    "static/js/2.0fb1c257.chunk.js": "/static/js/2.0fb1c257.chunk.js",
-    "static/js/2.0fb1c257.chunk.js.map": "/static/js/2.0fb1c257.chunk.js.map",
+    "static/js/2.996d68ff.chunk.js": "/static/js/2.996d68ff.chunk.js",
+    "static/js/2.996d68ff.chunk.js.map": "/static/js/2.996d68ff.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4d2af9c97d83f97d0c452d44fecdf6a5.js": "/precache-manifest.4d2af9c97d83f97d0c452d44fecdf6a5.js",
+    "precache-manifest.417daf70f0b5aee2f37af64b3f892204.js": "/precache-manifest.417daf70f0b5aee2f37af64b3f892204.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.0fb1c257.chunk.js.LICENSE.txt": "/static/js/2.0fb1c257.chunk.js.LICENSE.txt",
+    "static/js/2.996d68ff.chunk.js.LICENSE.txt": "/static/js/2.996d68ff.chunk.js.LICENSE.txt",
     "static/media/CMU Icon.png": "/static/media/CMU Icon.c0f77dd7.png",
     "static/media/HP Icon.svg": "/static/media/HP Icon.b19dc2e1.svg",
     "static/media/Ohio State Icon.png": "/static/media/Ohio State Icon.3e77af0a.png",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.791e2579.js",
-    "static/js/2.0fb1c257.chunk.js",
+    "static/js/2.996d68ff.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.efc889f1.chunk.js"
+    "static/js/main.940a09d9.chunk.js"
   ]
 }

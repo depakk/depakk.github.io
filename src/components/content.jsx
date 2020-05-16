@@ -8,7 +8,7 @@ import Map from './map';
 import Timeline from './timeline';
 
 const Content = () => (
-  <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
+  <Grid item xs={12} sm={12} md={6} component={Paper} elevation={6} square>
     <Switch>
       <Redirect exact from="/" to="/about" />
       <Route path="/about" component={About} />

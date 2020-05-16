@@ -1,12 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { HashRouter as Router } from 'react-router-dom';
-
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
+
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  CssBaseline,
+  Grid,
+  Hidden,
+} from '@material-ui/core';
+
 import Content from './components/content';
+import MobileDrawer from './components/mobileDrawer';
 import Sidebar from './components/sidebar';
 import './App.css';
 
@@ -35,7 +41,12 @@ const App = (props) => {
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Grid container component="main" className={classes.root}>
-          <Sidebar />
+          <Hidden smDown>
+            <Sidebar />
+          </Hidden>
+          <Hidden mdUp>
+            <MobileDrawer />
+          </Hidden>
           <Content />
         </Grid>
       </MuiThemeProvider>

@@ -21,12 +21,7 @@ const About = (props) => {
   return (
     <div className={classes.root}>
       <Container className={classes.cardContent}>
-        <Typography
-          component="h1"
-          variant="h2"
-          color="textPrimary"
-          gutterBottom
-        >
+        <Typography variant="h2" color="textPrimary" gutterBottom>
           About Me
         </Typography>
         <div style={{ marginBottom: '5%' }}>

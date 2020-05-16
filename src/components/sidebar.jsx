@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 
-import Avatar from '@material-ui/core/Avatar';
-import Box from '@material-ui/core/Box';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+import {
+  Avatar,
+  Box,
+  Divider,
+  Grid,
+  Link,
+  Paper,
+  Typography,
+} from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 
 import dpizzle from '../static/images/avatar/dpizzle.jpg';
+import { linkedinUrl, places, resumeUrl } from '../static/constants';
 
 const styles = (theme) => ({
   paper: {
@@ -26,30 +29,26 @@ const styles = (theme) => ({
   icon: { verticalAlign: 'middle' },
 });
 
-const places = ['colombo', 'columbus', 'san francisco', 'cmu'];
-const linkedinUrl = 'https://www.linkedin.com/in/depakk/';
-const resumeUrl =
-  'https://drive.google.com/uc?id=1WWRugcR9_fxNYd3Eaweh9iE7oytIGRlG&export=download';
-
 class Sidebar extends Component {
-  getTokenFromPath(index) {
-    const { location } = this.props;
-    return location.pathname.split('/')[index];
+  renderColor(topic) {
+    const {
+      location: { pathname },
+    } = this.props;
+    const regExp = new RegExp(topic);
+
+    return regExp.test(pathname) ? 'inherit' : 'secondary';
   }
 
-  renderColor = (isSelected) => (isSelected ? 'inherit' : 'secondary');
-
-  renderSpecialComponents(topic, topicParam) {
+  renderSpecialComponent(topic, topicParam) {
     const { classes } = this.props;
     let specialComponent;
     if (topic === 'about' || topic === 'timeline') {
-      const currentRouteView = this.getTokenFromPath(1);
       specialComponent = (
         <Typography>
           <Link
-            to={topic === 'about' ? `/${topic}` : '/timeline/1'}
+            to={`/${topic}`}
             className={classes.textLine}
-            color={this.renderColor(topic === currentRouteView)}
+            color={this.renderColor(topic)}
             component={RouterLink}
           >
             {topic === 'about' ? topicParam : topic}
@@ -57,8 +56,7 @@ class Sidebar extends Component {
         </Typography>
       );
     } else if (topic === 'map') {
-      const currentPlace = this.getTokenFromPath(2);
-      const color = this.renderColor(topicParam === currentPlace);
+      const color = this.renderColor(topicParam);
       specialComponent = (
         <span key={topicParam}>
           <Link
@@ -104,7 +102,7 @@ class Sidebar extends Component {
     const { classes } = this.props;
 
     return (
-      <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
+      <Grid item xs={6} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <Avatar alt="d" src={dpizzle} />
           <Typography component="div">
@@ -118,8 +116,8 @@ class Sidebar extends Component {
             </Box>
             <Divider variant="middle" />
           </Typography>
-          {this.renderSpecialComponents('about', 'a little bit about me')}
-          {this.renderSpecialComponents('timeline')}
+          {this.renderSpecialComponent('about', 'a little bit about me')}
+          {this.renderSpecialComponent('timeline')}
 
           <Typography>
             {this.renderCareerLink('linkedin')}
@@ -128,7 +126,7 @@ class Sidebar extends Component {
           </Typography>
 
           <Typography className={classes.textLine}>
-            {places.map((place) => this.renderSpecialComponents('map', place))}
+            {places.map((place) => this.renderSpecialComponent('map', place))}
           </Typography>
         </div>
       </Grid>

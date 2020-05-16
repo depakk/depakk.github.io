@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
 
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import ReactMapGL, { Marker, FlyToInterpolator } from 'react-map-gl';
 
 const token = process.env.REACT_APP_MAPBOX_TOKEN;
+const mapStyle = 'mapbox://styles/depak/ck9urrbp209v11io4yrhs77o7';
 
 const placeToLocationMapping = {
   colombo: { latitude: 6.910925, longitude: 79.854222 },
@@ -11,6 +13,13 @@ const placeToLocationMapping = {
   'san francisco': { latitude: 37.774929, longitude: -122.419418 },
   cmu: { latitude: 40.4451, longitude: -79.9454 },
 };
+
+const styles = (theme) => ({
+  map: {
+    height: '100%',
+    width: '100%',
+  },
+});
 
 class Map extends Component {
   constructor(props) {
@@ -20,8 +29,8 @@ class Map extends Component {
     this.state = {
       location,
       viewport: {
-        width: '50vw',
-        height: '100vh',
+        width: '100%',
+        height: '100%',
         longitude: location.longitude,
         latitude: location.latitude,
         zoom: 13,
@@ -75,15 +84,16 @@ class Map extends Component {
 
   render() {
     const { viewport, location } = this.state;
+    const { classes } = this.props;
 
     return (
-      <div>
+      <div className={classes.map}>
         <ReactMapGL
           {...viewport}
           onViewportChange={(nextViewport) => {
             this.onViewportChange(nextViewport);
           }}
-          mapStyle="mapbox://styles/depak/ck9urrbp209v11io4yrhs77o7"
+          mapStyle={mapStyle}
           mapboxApiAccessToken={token}
         >
           <Marker latitude={location.latitude} longitude={location.longitude}>
@@ -95,4 +105,4 @@ class Map extends Component {
   }
 }
 
-export default Map;
+export default withStyles(styles, { withTheme: true })(Map);

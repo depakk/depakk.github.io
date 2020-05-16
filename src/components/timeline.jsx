@@ -3,18 +3,21 @@ import { withStyles } from '@material-ui/core/styles';
 
 import ArrowBackIosTwoToneIcon from '@material-ui/icons/ArrowBackIosTwoTone';
 import ArrowForwardIosTwoToneIcon from '@material-ui/icons/ArrowForwardIosTwoTone';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Step from '@material-ui/core/Step';
-import StepButton from '@material-ui/core/StepButton';
-import StepLabel from '@material-ui/core/StepLabel';
-import Stepper from '@material-ui/core/Stepper';
-import Typography from '@material-ui/core/Typography';
+
+import {
+  Avatar,
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  Grid,
+  Paper,
+  Step,
+  StepButton,
+  StepLabel,
+  Stepper,
+  Typography,
+} from '@material-ui/core';
 
 import bckg from '../static/images/timelinebackground.jpg';
 import chapters from '../static/chapters';
@@ -31,7 +34,7 @@ const styles = (theme) => ({
     backgroundImage: `url(${bckg})`,
     backgroundPosition: '0 90%',
     backgroundSize: 'cover',
-    paddingTop: '10%',
+    padding: theme.spacing(8, 0, 0),
   },
   backButton: {
     marginRight: theme.spacing(1),

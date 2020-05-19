@@ -92,6 +92,7 @@ class Timeline extends Component {
           avatar={<Avatar alt="d" src={chapter.avatar} />}
           title={chapter.subtitle}
         />
+        {chapter.careerTitle}
         {chapter.description}
       </CardContent>
     </Card>
